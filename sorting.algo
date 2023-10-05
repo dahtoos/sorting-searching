@@ -1,0 +1,19 @@
+ALGORITHM algorithm_name
+VAR
+    Arr : ARRAY_OF INTEGER[5]; // declaring the array and define its length.;
+    Key : INTEGER
+    B : INTEGER
+    
+BEGIN    
+    Arr := [6,5,2,1,7] // this is the array to be sorted
+    FOR i FROM 1 TO Arr.length STEP 1 DO
+    Key := Arr[i]
+    B := i-1
+    WHILE(B>=0 && Arr[B]) DO
+    Arr[B+1]=Arr[B]
+    B := B-1
+    END_WHILE
+    Arr[B+1]:= Key
+    END_FOR
+    Write(Arr) // this is the sorted array 
+END
